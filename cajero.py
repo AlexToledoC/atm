@@ -39,47 +39,47 @@ def luz():
     if cambio < 0:
         print("Su pago no se ha podido realizar. Intente más tarde.")
     else:
-        print("Su cambio es:")
-        #Billete 200
-        billete200 = cambio // 200
-        billete200 = str(billete200)
-        sobrante200 = cambio % 200
-        print(billete200 + " billete(s) de $200")
-        #Billete 100
-        billete100 = sobrante200 // 100
-        billete100 = str(billete100)
-        sobrante100 = sobrante200 % 100
-        print(billete100 + " billete(s) de $100")
-        #Billete 50
-        billete50 = sobrante100 // 50
-        billete50 = str(billete50)
-        sobrante50 = sobrante100 % 50
-        print(billete50 + " billete(s) de $50")
-        #Billete 20
-        billete20 = sobrante50 // 20
-        billete20 = str(billete20)
-        sobrante20 = sobrante50 % 20
-        print(billete20 + " billete(s) de $20")
-        #Moneda 10
-        moneda10 = sobrante20 // 10
-        moneda10 = str(moneda10)
-        sobrante10 = sobrante20 % 10
-        print(moneda10 + " moneda(s) de $10")
-        #Moneda 5
-        moneda5 = sobrante10 // 5
-        moneda5 = str(moneda5)
-        sobrante5 = sobrante10 % 5
-        print(moneda5 + " moneda(s) de $5")
-        #Moneda 2
-        moneda2 = sobrante5 // 2
-        moneda2 = str(moneda2)
-        sobrante2 = sobrante5 % 2
-        print(moneda2 + " moneda(s) de $2")
-        #Moneda peso
-        if sobrante2 == 1:
-            print("1 moneda de $1")
-        else:
-            print("0 monedas de $1")
+        # print("Su cambio es:")
+        # #Billete 200
+        # billete200 = cambio // 200
+        # billete200 = str(billete200)
+        # sobrante200 = cambio % 200
+        # print(billete200 + " billete(s) de $200")
+        # #Billete 100
+        # billete100 = sobrante200 // 100
+        # billete100 = str(billete100)
+        # sobrante100 = sobrante200 % 100
+        # print(billete100 + " billete(s) de $100")
+        # #Billete 50
+        # billete50 = sobrante100 // 50
+        # billete50 = str(billete50)
+        # sobrante50 = sobrante100 % 50
+        # print(billete50 + " billete(s) de $50")
+        # #Billete 20
+        # billete20 = sobrante50 // 20
+        # billete20 = str(billete20)
+        # sobrante20 = sobrante50 % 20
+        # print(billete20 + " billete(s) de $20")
+        # #Moneda 10
+        # moneda10 = sobrante20 // 10
+        # moneda10 = str(moneda10)
+        # sobrante10 = sobrante20 % 10
+        # print(moneda10 + " moneda(s) de $10")
+        # #Moneda 5
+        # moneda5 = sobrante10 // 5
+        # moneda5 = str(moneda5)
+        # sobrante5 = sobrante10 % 5
+        # print(moneda5 + " moneda(s) de $5")
+        # #Moneda 2
+        # moneda2 = sobrante5 // 2
+        # moneda2 = str(moneda2)
+        # sobrante2 = sobrante5 % 2
+        # print(moneda2 + " moneda(s) de $2")
+        # #Moneda peso
+        # if sobrante2 == 1:
+        #     print("1 moneda de $1")
+        # else:
+        #     print("0 monedas de $1")
         print("El pago se ha realizado con éxito.")
         otra_operacion()
 
