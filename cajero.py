@@ -122,15 +122,16 @@ def run():
     saldo = 50000
     choice = int(input("Escoja una opción con su respectivo número: "))
     if choice == 1:
-        consulta_saldo(saldo)
+        consulta_saldo()
     elif choice == 2:
-        tiempo_aire()
+        tiempo_aire(saldo)
     elif choice == 3:
         luz()
     elif choice == 4:
         retiro()
     else:
         print("Por favor, ingrese una opción válida.")
+        otra_operacion()
 
 
 if __name__ == '__main__':
