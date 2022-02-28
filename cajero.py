@@ -17,9 +17,9 @@ def consulta_saldo():
     otra_operacion()
 
 
-def tiempo_aire():
+def tiempo_aire(saldo):
     os.system("cls")
-    saldo = 50000
+    nip = int(input("Ingrese su NIP: "))
     numero = int(input("Ingrese su número celular: "))
     recarga = int(input("Ingrese el monto de la recarga: "))
     nuevo_saldo = saldo - recarga
@@ -112,7 +112,6 @@ def retiro():
 
 def run():
     print("Bienvenid@ al cajero automátio.")
-    nip = int(input("Ingrese su NIP: "))
     print("""¿Qué operación desea realizar?"
 
     1. Consultar saldo
@@ -123,7 +122,7 @@ def run():
     saldo = 50000
     choice = int(input("Escoja una opción con su respectivo número: "))
     if choice == 1:
-        consulta_saldo()
+        consulta_saldo(saldo)
     elif choice == 2:
         tiempo_aire()
     elif choice == 3:
