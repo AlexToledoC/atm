@@ -1,2 +1,2 @@
-# atm
+# ATM
 Simulation of an atm
