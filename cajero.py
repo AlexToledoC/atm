@@ -1,6 +1,22 @@
 import os
 
 
+def cambio(monto):
+    numero = int(input("Ingrese su número celular: "))
+    print("Ha escogido una recarga de $" + monto)
+    pagado = int(input("Ingrese el monto con el que desea pagar: \n$"))
+    if pagado < monto:
+        print("La operación no se ha podido realizar.")
+    else:
+       cambio = pagado - monto
+       cambio = str(cambio)
+       monto = str(monto)
+       numero = str(numero)
+       print("La operación se ha realizado con éxito. Se ha recargado $" + monto + " al número " + numero)
+       print("Su cambio es $" + cambio)
+
+
+
 def otra_operacion():
     otra_opera = input("""\n¿Desea realizar otra operación?
     Escriba sí o no: 
@@ -11,22 +27,48 @@ def otra_operacion():
         print("Vuelva pronto.")
 
 
-def consulta_saldo():
+def consulta_saldo(nuevo_saldo):
     os.system("cls")
-    print("Su saldo es $50,000.00")
+    nip = input('Ingrese su NIP: ')
+    if nip == 1:
+        saldo -= nuevo_saldo
+        saldo = str(saldo)
+        print("Su saldo es $" + saldo)
     otra_operacion()
 
 
-def tiempo_aire(saldo):
+def tiempo_aire():
     os.system("cls")
-    nip = int(input("Ingrese su NIP: "))
-    numero = int(input("Ingrese su número celular: "))
-    recarga = int(input("Ingrese el monto de la recarga: "))
-    nuevo_saldo = saldo - recarga
-    nuevo_saldo = str(nuevo_saldo)
-    print("\nLa compra de tiempo aire se ha realizado con éxito.")
-    print("Su nuevo saldo es $" + nuevo_saldo)
-    otra_operacion()
+    print("Escoja la compañía: ")
+    print("1. Telcel ")
+    print("2. Movistar ")
+    print("3. AT&T ")
+    print("4. Unefon ")
+    eleccion = int(input("Ingrese el número correspondiente (1-4) \n"))
+    if eleccion == 1 or eleccion == 2 or eleccion == 3 or eleccion == 4:
+        print("¿Cuánto tiempo aire desea recargar? ")
+        print("1. $20")
+        print("2. $50")
+        print("3. $100")
+        print("4. $150")
+        print("5. $200")
+        print("6. $500")
+        eleccion2 = int(input("Ingrese el respecitvo número: \n"))
+        if eleccion2 == 1:
+            cambio(20)
+        elif eleccion2 == 2:
+            cambio(50)
+        elif eleccion2 == 2:
+            cambio(100)
+        elif eleccion2 == 2:
+            cambio(150)
+        elif eleccion2 == 2:
+            cambio(200)
+        elif eleccion2 == 2:
+            cambio(500)
+
+        print("\nLa compra de tiempo aire se ha realizado con éxito.")
+        otra_operacion()
 
 
 def luz():
