@@ -118,6 +118,7 @@ def run():
     2. Comprar tiempo aire
     3. Pago de servicios
     4. Retiro de efectivo
+    5. Salir
     """)
     saldo = 50000
     choice = int(input("Escoja una opción con su respectivo número: "))
@@ -129,6 +130,8 @@ def run():
         luz()
     elif choice == 4:
         retiro()
+    elif choice == 5:
+        print("Vuelva pronto")
     else:
         print("Por favor, ingrese una opción válida.")
         otra_operacion()
