@@ -17,7 +17,6 @@ def cambio(monto):
         print("La operación se ha realizado con éxito.") 
         print("Se ha recargado $" + monto + " al número " + numero)
         print("Su cambio es $" + cambio)
-    otra_operacion()
 
 
 def otra_operacion():
@@ -30,14 +29,13 @@ def otra_operacion():
         print("Vuelva pronto.")
 
 
-def consulta_saldo(nuevo_saldo):
+def consulta_saldo(saldo, nuevo_saldo):
     os.system("cls")
     nip = input('Ingrese su NIP: \n')
     if nip == 1:
         saldo -= nuevo_saldo
         saldo = str(saldo)
         print("Su saldo es $" + saldo)
-    otra_operacion()
 
 
 def tiempo_aire():
@@ -71,10 +69,8 @@ def tiempo_aire():
             cambio(500)
         else:
             print("Por favor, ingrese una opción válida.")
-        otra_operacion()
     else:
         print("Por favor, ingrese una opción válida.")
-        otra_operacion()
 
 
 def luz():
@@ -130,7 +126,6 @@ def luz():
         #Moneda peso
         if sobrante2 == 1:
             print("1 moneda de $1")
-        otra_operacion()
 
 
 def retiro(saldo):
@@ -159,7 +154,6 @@ def retiro(saldo):
     nuevo_saldo = saldo - monto_retiro
     saldo = nuevo_saldo
     print(f"Su nuevo saldo es {nuevo_saldo}")
-    otra_operacion()
     return nuevo_saldo
     
 
@@ -176,13 +170,17 @@ def run():
     saldo = 50000
     choice = int(input("Escoja una opción con su respectivo número: \n"))
     if choice == 1:
-        consulta_saldo(0)
+        consulta_saldo(saldo, 0)
+        otra_operacion()
     elif choice == 2:
         tiempo_aire()
+        otra_operacion()
     elif choice == 3:
         luz()
+        otra_operacion()
     elif choice == 4:
         retiro(saldo)
+        otra_operacion()
     elif choice == 5:
         print("Gracias por su visita.")
     else:
